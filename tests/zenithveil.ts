@@ -27,8 +27,7 @@ import { expect } from "chai";
 describe("Zenithveil", () => {
   // Configure the client to use the local cluster.
   anchor.setProvider(anchor.AnchorProvider.env());
-  const program = anchor.workspace
-    .Zenithveil as Program<Zenithveil>;
+  const program = anchor.workspace.Zenithveil as Program<Zenithveil>;
   const provider = anchor.getProvider();
 
   type Event = anchor.IdlEvents<(typeof program)["idl"]>;
@@ -52,7 +51,12 @@ describe("Zenithveil", () => {
     const owner = readKpJson(`${os.homedir()}/.config/solana/id.json`);
 
     console.log("Initializing add together computation definition");
-    const initATSig = await initAddTogetherCompDef(program, owner, false, false);
+    const initATSig = await initAddTogetherCompDef(
+      program,
+      owner,
+      false,
+      false
+    );
     console.log(
       "Add together computation definition initialized with signature",
       initATSig

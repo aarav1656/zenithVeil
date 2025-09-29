@@ -20,12 +20,11 @@ const nextConfig = {
     return config;
   },
   env: {
-    NEXT_PUBLIC_SOLANA_NETWORK: process.env.NEXT_PUBLIC_SOLANA_NETWORK || 'devnet',
-    NEXT_PUBLIC_ARCIUM_NETWORK: process.env.NEXT_PUBLIC_ARCIUM_NETWORK || 'testnet',
-  },
-  experimental: {
-    appDir: true,
+    NEXT_PUBLIC_SOLANA_NETWORK:
+      process.env.NEXT_PUBLIC_SOLANA_NETWORK || "devnet",
+    NEXT_PUBLIC_ARCIUM_NETWORK:
+      process.env.NEXT_PUBLIC_ARCIUM_NETWORK || "testnet",
   },
 };
 
-module.exports = nextConfig; 
+module.exports = nextConfig;
